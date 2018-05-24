@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="pref_local_storage"
+        android:title="@string/local_storage">
+        <EditTextPreference
+            android:defaultValue="/sdcard/Music/"
+            android:key="local_storage_path"
+            android:title="@string/music_directory" />
+        <EditTextPreference
+            android:defaultValue="2"
+            android:inputType="number"
+            android:key="directory_depth"
+            android:numeric="integer"
+            android:title="@string/directory_scan_depth" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="pref_mpd_server"
+        android:title="@string/mpd_server">
+        <EditTextPreference
+            android:inputType="phone"
+            android:key="mpd_server_ip"
+            android:title="@string/server_ip" />
+        <EditTextPreference
+            android:defaultValue="6600"
+            android:inputType="number"
+            android:key="mpd_server_port"
+            android:title="@string/server_port" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="pref_other"
+        android:title="@string/other">
+        <CheckBoxPreference
+            android:key="no_seek_buttons"
+            android:title="@string/hide_seek_buttons" />
+        <CheckBoxPreference
+            android:key="no_background_service"
+            android:title="@string/disable_background_service" />
+        <CheckBoxPreference
+            android:key="song_autoplay"
+            android:title="@string/next_song_autoplay" />
+    </PreferenceCategory>
+</PreferenceScreen>

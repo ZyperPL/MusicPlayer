@@ -1,0 +1,34 @@
+<!--suppress ALL -->
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">#212121</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="DarkDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:colorBackground">@color/colorPrimary</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:minWidth">200dp</item>
+    </style>
+
+    <style name="SettingsTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccentDark</item>
+        <item name="android:colorBackground">#212121</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textColorSecondary">#CCCCCC</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:dialogTheme">@style/DarkDialog</item>"
+        <item name="android:alertDialogTheme">@style/DarkDialog</item>"
+    </style>
+
+</resources>
