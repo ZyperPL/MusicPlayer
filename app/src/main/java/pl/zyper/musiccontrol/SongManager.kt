@@ -16,6 +16,7 @@ class SongManager {
 
     private fun getFilesFromDirectory(path: String, depth: Int, fileList: ArrayList<String>) {
         val f = File(path)
+        if (!f.exists()) return
         if (f.isDirectory && depth > 0) {
             for (i in 0 until f.listFiles().size) {
                 getFilesFromDirectory(f.listFiles()[i].absolutePath, depth - 1, fileList)
@@ -32,6 +33,7 @@ class SongManager {
     private fun getSongsFromFiles(files: List<String>) {
         val metaRetriever = MediaMetadataRetriever()
         for (file in files) {
+
             metaRetriever.setDataSource(file)
             songs.add(SongInfo(
                     metaRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST),
